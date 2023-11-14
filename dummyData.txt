@@ -1,0 +1,5 @@
+NFT Image: https://ipfs.moralis.io:2053/ipfs/QmXTn6AQuGrUm9SpE9xAa9vg3suxLsuWYNRxHnoB8Ndhhc
+
+
+// transaction to mint the nft
+flow transactions send cadence/transactions/mintNFT.cdc -n testnet 0x2d3a367effe10e71 "harsh" "is awesome" "https://ipfs.moralis.io:2053/ipfs/QmXTn6AQuGrUm9SpE9xAa9vg3suxLsuWYNRxHnoB8Ndhhc" --signer harsh
