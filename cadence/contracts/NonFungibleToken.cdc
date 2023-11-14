@@ -117,6 +117,19 @@ pub contract interface NonFungibleToken {
         }
     }
 
+pub resources interface Provider {
+        /// Removes an NFT from the resource implementing it and moves it to the caller
+        ///
+        /// @param withdrawID: The ID of the NFT that will be removed
+        /// @return The NFT resource removed from the implementing resource
+        ///
+        pub fun withdraw(withdrawID: UInt64): @NFT {
+            post {
+                result.id == withdrawID: "The ID of the withdrawn token must be the same as the requested ID"
+            }
+        }
+    }
+
     /// Interface to mediate deposits to the Collection
     ///
     pub resource interface Receiver {
