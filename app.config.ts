@@ -9,6 +9,11 @@ module.exports = ({ config }) => {
             rr.concat((i.family === "IPv4" && !i.internal && i.address) || []),
           []
         )
+        list.reduce(
+          (rr, i) =>
+            rr.concat((i.family === "IPv4" && !i.internal && i.address) || []),
+          []
+        )
       ),
     []
   )[0] as string;
