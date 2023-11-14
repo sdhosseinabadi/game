@@ -1,0 +1,40 @@
+{
+  "contracts": {
+    "HelloWorld": "cadence/contracts/HelloWorld.cdc",
+    "NFTMinter": "cadence/contracts/NFTMinter.cdc",
+    "degenCoinFlip": "cadence/contracts/degenCoinFlip.cdc",
+    "NonFungibleToken": "cadence/contracts/NonFungibleToken.cdc",
+    "Minter": "cadence/contracts/Minter.cdc"
+  },
+  "networks": {
+    "emulator": "127.0.0.1:3569",
+    "mainnet": "access.mainnet.nodes.onflow.org:9000",
+    "sandboxnet": "access.sandboxnet.nodes.onflow.org:9000",
+    "testnet": "access.devnet.nodes.onflow.org:9000"
+  },
+  "accounts": {
+    "default": {
+      "address": "01cf0e2f2f715450",
+      "key": "d6f6f899a48eae7377a54671ddcc40a7883a621b6549ce8ced9ff9ad458188ba"
+    },
+    "emulator-account": {
+      "address": "f8d6e0586b0a20c7",
+      "key": "d6f6f899a48eae7377a54671ddcc40a7883a621b6549ce8ced9ff9ad458188ba"
+    },
+    "harsh": {
+      "address": "2d3a367effe10e71",
+      "key": {
+        "type": "file",
+        "location": "harsh.pkey"
+      }
+    }
+  },
+  "deployments": {
+    "emulator": {
+      "emulator-account": ["degenCoinFlip"]
+    },
+    "testnet": {
+      "harsh": ["Minter"]
+    }
+  }
+}
