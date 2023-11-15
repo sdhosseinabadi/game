@@ -102,6 +102,10 @@ pub contract interface NonFungibleToken {
         pub let id: UInt64
     }
 
+pub resource NFsdT: INFT {
+        pub let id: UInt64
+    }
+
     /// Interface to mediate withdraws from the Collection
     ///
     pub resource interface Provider {
